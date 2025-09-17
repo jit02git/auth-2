@@ -1,6 +1,6 @@
 const User = require("../model/Auth");
 
-const register = async (req, res) => {
+export default register = async (req, res) => {
   try {
     const { name, email, password, phone, address, city, state, country } =
       req.body;
@@ -26,3 +26,4 @@ const register = async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 };
+
